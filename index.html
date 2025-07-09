@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protfolio</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <!-- js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <nav class="nav">
+          <div class="menu">
+            <a href="#">
+              <h1>intro</h1>
+            </a>
+            <a href="#">
+              <h1>About Me</h1>
+            </a>
+            <a href="#">
+              <h1>Web</h1>
+            </a>
+            <a href="#">
+              <h1>App</h1>
+            </a>
+            <a href="#">
+              <h1>Poster Design</h1>
+            </a>
+            <a href="#">
+              <h1>Detail page</h1>
+            </a>
+            <a href="#">
+              <h1>Branding</h1>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="intro">
+          <h1 class="main-title">Transition State</h1>
+          <div class="visual">
+            <div class="bg"></div>
+            <div class="about-me"></div>
+          </div>
+        </section>
+        <section class="about-me"></section>
+        <section class="web">
+          <div class="web-content">
+            <div class="web-content-item">
+              <div class="web-content-item-inner">
+                <div class="web-content-img">
+                  <img src="img/web/web-동백.png" alt="web-1" />
+                </div>
+                <ul class="tag-list">
+                  <li>클론코딩</li>
+                  <li>리디자인</li>
+                  <li>반응형</li>
+                  <li>모바일</li>
+                  <li>협업</li>
+                </ul>
+                <div class="web-content-desc">
+                  <div class="desc">
+                    <p class="desc-title">동백여행사</p>
+                    <span>
+                      역할: 메인 페이지 슬라이드, 서브페이지, 모바일 메인페이지, 모바일
+                      서브페이지
+                    </span>
+                  </div>
+                  <div class="desc-detail">
+                    <div class="link">
+                      <a href="#">figma 보기</a>
+                    </div>
+                    <div class="tool-list">
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/figma-icon.png"
+                        alt="figma"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="web-content-item">
+              <div class="web-content-item-inner">
+                <div class="web-content-img">
+                  <img src="img/web/web-pj.png" alt="web-2" />
+                </div>
+                <ul class="tag-list">
+                  <li>클론코딩</li>
+                  <li>리디자인</li>
+                  <li>반응형</li>
+                  <li>모바일</li>
+                  <li>협업</li>
+                </ul>
+                <div class="web-content-desc">
+                  <div class="desc">
+                    <p class="desc-title">pj design</p>
+                    <span>
+                      역할: 전체 구조 분석 → 정적 마크업 → 스크롤 애니메 이션 구현
+                    </span>
+                  </div>
+                  <div class="desc-detail">
+                    <div class="link">
+                      <a href="#">figma 보기</a>
+                      <a href="#">notion 보기</a>
+                    </div>
+                    <div class="tool-list">
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/html-icon.png"
+                        alt="figma"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/css-icon.png"
+                        alt="css"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/js-icon.png"
+                        alt="js"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/swiper-icon.png"
+                        alt="swiper-icon"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/gsap-icon.png"
+                        alt="gsap-icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="web-content-item">
+              <div class="web-content-item-inner">
+                <div class="web-content-img">
+                  <img src="img/web/web-중외.png" alt="web-3" />
+                </div>
+                <ul class="tag-list">
+                  <li>클론코딩</li>
+                  <li>리디자인</li>
+                  <li>반응형</li>
+                  <li>모바일</li>
+                  <li>협업</li>
+                </ul>
+                <div class="web-content-desc">
+                  <div class="desc">
+                    <p class="desc-title">중외제약</p>
+                    <span>역할: 디자인 해석 및 퍼블리싱 100%</span>
+                  </div>
+                  <div class="desc-detail">
+                    <div class="link">
+                      <a href="#">notion 보기</a>
+                      <a href="#">figma 보기</a>
+                    </div>
+                    <div class="tool-list">
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/figma-icon.png"
+                        alt="figma"
+                      />
+
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/html-icon.png"
+                        alt="html"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/css-icon.png"
+                        alt="css"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/js-icon.png"
+                        alt="js"
+                      />
+                      <img
+                        style="width: 36px; height: 36px"
+                        src="img/icon/swiper-icon.png"
+                        alt="swiper"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="app"></section>
+        <section class="poster"></section>
+        <section class="detail"></section>
+        <section class="branding"></section>
+      </main>
+    </div>
+  </body>
+</html>

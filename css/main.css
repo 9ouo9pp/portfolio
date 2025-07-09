@@ -1,0 +1,204 @@
+@charset "utf-8";
+.main {
+  position: relative;
+  width: 100%;
+}
+
+/* intro 
+=================================================================================*/
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(113deg, #e0e4f9 25.89%, #f0e2ec 82.34%, #faf3f0 105.77%);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main-title {
+  position: absolute;
+  top: 20vw;
+  z-index: 1;
+  font-size: clamp(28px, 7vw, 96px); /* ✅ 반응형 폰트 */
+  text-align: center;
+  color: var(--gray2, #4f4f4f);
+  text-shadow: 8px 8px 10px rgba(18, 18, 18, 0.2);
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.visual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: var(--gray5, #fdfdfd);
+  box-shadow: 3.64px 3.64px 10.921px 0px rgba(33, 33, 33, 0.2) inset;
+  overflow: hidden;
+  width: 60vw;
+  height: 90vh;
+  border-radius: 200px;
+  transition: all 0.3s ease;
+}
+
+/* 애니메이션용 초기 설정은 gsap에서 설정되므로 여기선 기본값만 지정 */
+
+.visual .about-me {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  font-size: clamp(28px, 5vw, 64px); /* ✅ 반응형 폰트 */
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visual .about-me.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* intro end
+================================================================================= */
+
+/* aboutme 
+=================================================================================*/
+/* aboutme end 
+=================================================================================*/
+
+/* web
+=================================================================================*/
+.web {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(
+    --gra3,
+    linear-gradient(113deg, #e0e4f9 25.89%, #f0e2ec 82.34%, #faf3f0 105.77%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+.web-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.web-content-item {
+  flex: 1 1 300px;
+  max-width: 460px;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid var(--gray4, #f2f2f2);
+  background: var(--gray5, #fdfdfd);
+  box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
+  box-sizing: border-box;
+}
+
+.web-content-item-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.web-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
+  background: lightgray -4.278px -3.684px / 102.446% 101.39% no-repeat;
+}
+
+.tag-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+.tag-list li {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 0.5px solid var(--gray3, #bdbdbd);
+  background: var(--gray5, #fdfdfd);
+  box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
+  font-size: 0.9rem;
+}
+
+.web-content-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 24px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.desc {
+  width: 100%;
+  gap: 8px;
+  height: auto;
+}
+
+.web-content-desc span {
+  color: var(--gray2);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.desc-detail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.desc-detail .link {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .web {
+    padding: 0 24px;
+  }
+}
+/* web end 
+=================================================================================*/
