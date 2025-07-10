@@ -13,12 +13,12 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 48px;
-  background-color: #4f4f4f;
+  /* background-color: #4f4f4f; */
 }
 .page-left {
   flex: 1;
   height: 100%;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .page-left-desc {
   width: 100%;
@@ -72,6 +72,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  gap: 4px;
 }
 .page-left-img {
   position: relative;
@@ -86,12 +87,14 @@
 }
 .page-right {
   flex: 3;
-  /* height: 100%; */
+  height: 100%;
   display: flex;
   gap: 48px;
   justify-content: center;
-  background-color: red;
+  /* background-color: red; */
   overflow: hidden;
+  position: relative;
+  overflow-y: scroll;
 }
 .page-right img {
   width: 22vw;
@@ -108,7 +111,12 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(113deg, #e0e4f9 25.89%, #f0e2ec 82.34%, #faf3f0 105.77%);
+  background: linear-gradient(
+    113deg,
+    #e0e4f9 25.89%,
+    #f0e2ec 82.34%,
+    #faf3f0 105.77%
+  );
   position: relative;
   box-sizing: border-box;
 }
@@ -117,7 +125,7 @@
   position: absolute;
   top: 20vw;
   z-index: 1;
-  font-size: clamp(28px, 7vw, 96px); /* ✅ 반응형 폰트 */
+  font-size: clamp(28px, 7vw, 96px);
   text-align: center;
   color: var(--gray2, #4f4f4f);
   text-shadow: 8px 8px 10px rgba(18, 18, 18, 0.2);
@@ -149,15 +157,13 @@
   transition: all 0.3s ease;
 }
 
-/* 애니메이션용 초기 설정은 gsap에서 설정되므로 여기선 기본값만 지정 */
-
 .visual .about-me {
   position: absolute;
   left: 2%;
   top: 50%;
   z-index: 10;
   transform: translateY(-50%);
-  font-size: clamp(28px, 5vw, 64px); /* ✅ 반응형 폰트 */
+  font-size: clamp(28px, 5vw, 64px);
   color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
   overflow: hidden;
@@ -282,6 +288,12 @@
   gap: 8px;
   height: auto;
 }
+.desc p {
+  font-size: 24px;
+}
+.desc span {
+  font-size: 24px;
+}
 
 .web-content-desc span {
   color: var(--gray2);
@@ -331,43 +343,74 @@
 
 .app-left-img {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.app-left-img img {
+  width: 80%;
+
   object-fit: contain;
 }
-.app-right {
+.app-right,
+.scroll-container {
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
 }
-.app-right img {
+.app-main-img,
+.app-sub-img,
+.scroll-1,
+.scroll-2 {
   width: 22vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
-.app-main-img {
+.app-main-img img,
+.app-sub-img img,
+.scroll-1 img,
+.scroll-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
 }
-.app-sub-img {
+.app-sub-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
+  animation: autoScrollUp 30s linear infinite;
 }
+@keyframes autoScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-33.33%);
+  }
+}
+
 /* app end
 =================================================================================*/
 
 /* poster 
 =================================================================================*/
-.swiper-container {
+.poster-inner {
+  position: relative;
   width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #444;
+  height: 100vh;
+  padding: 17vh 100px 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  /* justify-content: space-between; */
+  gap: 48px;
+  background-color: #4f4f4f;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* poster end 
 =================================================================================*/
 
@@ -380,6 +423,32 @@
   gap: 48px;
 }
 .detail-page-left-desc {
+}
+.detail-page-right {
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+}
+.detail-page-img-1,
+.detail-page-img-2 {
+  width: 22vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+.detail-page-img-1 img,
+.detail-page-img-2 img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.detail-page-img-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
+  animation: autoScrollUp 30s linear infinite;
 }
 /* detail end 
 =================================================================================*/
@@ -411,11 +480,16 @@
 }
 .branding-img {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: flex-start;
 }
 .branding-img img {
   width: 80%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
+  animation: autoScrollUp 40s linear infinite;
 }
 /* branding end 
 =================================================================================*/
