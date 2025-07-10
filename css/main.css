@@ -3,6 +3,100 @@
   position: relative;
   width: 100%;
 }
+/* page 공통 */
+.page-inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 17vh 100px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  background-color: #4f4f4f;
+}
+.page-left {
+  flex: 1;
+  height: 100%;
+  background-color: aqua;
+}
+.page-left-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.page-left-txt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.page-left-txt p {
+  color: var(--gray1, #121212);
+  font-family: Pretendard;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.69px;
+  text-align: center;
+}
+.page-left-txt span {
+  color: var(--gray3, #bdbdbd);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.46px;
+  text-align: center;
+}
+.page-left-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.link-list {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+.tool-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.page-left-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page-left-img img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain;
+}
+.page-right {
+  flex: 3;
+  /* height: 100%; */
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  background-color: red;
+  overflow: hidden;
+}
+.page-right img {
+  width: 22vw;
+}
+/* page 공통 end*/
 
 /* intro 
 =================================================================================*/
@@ -89,6 +183,7 @@
 .web {
   position: relative;
   width: 100%;
+  height: 100vh;
   min-height: 100vh;
   background: var(
     --gra3,
@@ -120,6 +215,12 @@
   background: var(--gray5, #fdfdfd);
   box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
   box-sizing: border-box;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+.web-content-item:hover {
+  transform: scale(1.05);
 }
 
 .web-content-item-inner {
@@ -128,8 +229,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
+.web-content-img {
+  position: relative;
+}
 .web-content-img img {
   width: 100%;
   height: 100%;
@@ -144,7 +249,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  padding: 8px 16px;
+  padding: 16px 16px;
   box-sizing: border-box;
 }
 
@@ -155,7 +260,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-  border: 0.5px solid var(--gray3, #bdbdbd);
+  border: 0.5px solid rgba(189, 189, 189, 0.5);
   background: var(--gray5, #fdfdfd);
   box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
   font-size: 0.9rem;
@@ -163,10 +268,12 @@
 
 .web-content-desc {
   width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 0 16px 24px;
-  gap: 16px;
+  /* gap: 16px; */
   box-sizing: border-box;
 }
 
@@ -200,5 +307,115 @@
     padding: 0 24px;
   }
 }
+
 /* web end 
+=================================================================================*/
+
+/* app 
+=================================================================================*/
+.app-tag-list {
+  display: flex;
+  gap: 8px;
+}
+.app-tag-list li {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 20px;
+  background: var(--gray4, #f2f2f2);
+  box-shadow: 4px 4px 20px 0px rgba(189, 189, 189, 0.2);
+}
+
+.app-left-img {
+  width: 100%;
+  object-fit: contain;
+}
+.app-right {
+}
+.app-right img {
+  width: 22vw;
+}
+.app-main-img {
+}
+.app-sub-img {
+}
+/* app end
+=================================================================================*/
+
+/* poster 
+=================================================================================*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* poster end 
+=================================================================================*/
+
+/* detail 
+=================================================================================*/
+
+.detail-page-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.detail-page-left-desc {
+}
+/* detail end 
+=================================================================================*/
+
+/* branding 
+=================================================================================*/
+.branding-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.branding-name p {
+  color: var(--gray2, #4f4f4f);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.46px;
+}
+.branding-left-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.branding-left-img img {
+  width: 74%;
+}
+.branding-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.branding-img img {
+  width: 80%;
+}
+/* branding end 
 =================================================================================*/

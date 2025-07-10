@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lib.css" />
     <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -66,7 +68,6 @@
             <div class="about-me"></div>
           </div>
         </section>
-        <section class="about-me"></section>
         <section class="web">
           <div class="web-content">
             <div class="web-content-item">
@@ -215,11 +216,176 @@
             </div>
           </div>
         </section>
-        <section class="app"></section>
-        <section class="poster"></section>
-        <section class="detail"></section>
-        <section class="branding"></section>
+        <section class="app">
+          <div class="app-inner page-inner">
+            <div class="app-left page-left">
+              <div class="app-left-desc page-left-desc">
+                <ul class="app-tag-list">
+                  <li>협업</li>
+                  <li>앱디자인</li>
+                </ul>
+                <div class="app-left-desc-txt page-left-txt">
+                  <p>Pawkit</p>
+                  <span>반려동물 큐레이션 쇼핑 앱</span>
+                </div>
+                <div class="app-left-desc-bottom page-left-bottom">
+                  <div class="link-list">
+                    <a
+                      href="https://www.figma.com/proto/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=478%3A13752&node-id=478-21835&p=f&viewport=661%2C25%2C0.03&t=Y3ZCyns95W5p9ECe-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=478%3A21835"
+                      >제작 프로세스 보기</a
+                    >
+                    <a
+                      href="https://www.figma.com/design/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=478-13752&t=GzJZ7DLsc9e62AhL-1"
+                      >figma 보기</a
+                    >
+                  </div>
+                  <div class="tool-list">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="img/icon/figma-icon.png"
+                      alt="figma"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="app-left-img page-left-img">
+                <img src="img/app/mobile-mokup.png" alt="mobile-mokup" />
+              </div>
+            </div>
+            <div class="app-right page-right">
+              <div class="app-main-img">
+                <img src="img/app/main.png" alt="app-main-img" />
+              </div>
+              <div class="app-sub-img">
+                <img src="img/app/commu-home.png" alt="app-home" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="poster">
+          <div class="poster-inner">
+            <swiper-container
+              class="mySwiper"
+              pagination="true"
+              pagination-clickable="true"
+              space-between="30"
+              slides-per-view="3"
+              loof="true"
+            >
+              <swiper-slide>Slide 1</swiper-slide>
+              <swiper-slide>Slide 2</swiper-slide>
+              <swiper-slide>Slide 3</swiper-slide>
+              <swiper-slide>Slide 4</swiper-slide>
+              <swiper-slide>Slide 5</swiper-slide>
+            </swiper-container>
+          </div>
+        </section>
+        <section class="detail-page">
+          <div class="detail-page-inner page-inner">
+            <div class="detail-page-left page-left">
+              <div class="detail-page-left-desc page-left-desc">
+                <div class="detail-page-left-desc-txt page-left-txt">
+                  <p>마틴콕스 가방 상세페이지</p>
+                  <span>절제된 레이아웃으로 브랜드의 클래식함을 표현</span>
+                </div>
+                <div class="detail-page-left-desc-bottom page-left-bottom">
+                  <div class="tool-list">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="img/icon/ps-icon.png"
+                      alt="ps-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="detail-page-left-img page-left-img">
+                <img src="img/detail/Image.png" alt="detail-page-img" />
+              </div>
+            </div>
+            <div class="detail-page-right page-right">
+              <div class="detail-page-img-1">
+                <img src="img/detail/상세페이지1.png" alt="detail-1" />
+              </div>
+              <div class="detail-page-img-2">
+                <img src="img/detail/상세페이지2.png" alt="detail-2" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="branding">
+          <div class="branding-inner page-inner">
+            <div class="branding-left page-left">
+              <div class="branding-left-desc page-left-desc">
+                <div class="branding-left-desc-txt page-left-txt">
+                  <p>브랜드 디자인</p>
+                  <div class="branding-name">
+                    <p>케어루틴</p>
+                    <span>맞춤형 영양제 케어 서비스</span>
+                  </div>
+                </div>
+                <div class="branding-left-desc-bottom page-left-bottom">
+                  <div class="tool-list">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="img/icon/ai-icon.png"
+                      alt="ps-icon"
+                    />
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="img/icon/ps-icon.png"
+                      alt="ps-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="branding-left-img page-left-img">
+                <img src="img/branding/logo.png" alt="detail-page-img" />
+              </div>
+            </div>
+            <div class="branding-right page-right">
+              <div class="branding-img">
+                <img src="img/branding/branding.png" alt="branding" />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+    <div id="modal-web-dong" class="web-modal">
+      <div class="web-modal-inner">
+        <!-- <div class="web-modal-top">
+          <p>Main Page</p>
+        </div>
+        <div class="web-modal-content"></div>
+        <div class="web-modal-link"></div> -->
+        <swiper-container
+          class="mySwiper2"
+          pagination="true"
+          effect="coverflow"
+          grab-cursor="true"
+          centered-slides="true"
+          slides-per-view="auto"
+          coverflow-effect-rotate="50"
+          coverflow-effect-stretch="0"
+          coverflow-effect-depth="100"
+          coverflow-effect-modifier="1"
+          coverflow-effect-slide-shadows="true"
+        >
+          <swiper-slide>
+            <img src="img/web/main.png" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="img/web/sub-page-detail.png" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="img/web/sub-page-pack.png" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+    <div id="modal-web-pj" class="web-modal"></div>
+    <div id="modal-web-jung" class="web-modal"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>

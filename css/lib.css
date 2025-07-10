@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* web */
+/* .web-modal img {
+  width: 1000px;
+  object-fit: cover;
+} */
+
+/* Swiper Container */
+swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 1000px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* 기본 dot 색상 변경 */
+.swiper-pagination-bullet {
+  background-color: #d8def8;
+  opacity: 0.5;
+}
+
+/* 활성화된 dot 색상 */
+.swiper-pagination-bullet-active {
+  background-color: #d8def8;
+  opacity: 1;
+}
+
+/* web end */
