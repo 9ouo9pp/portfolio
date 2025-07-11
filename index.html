@@ -1,137 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protfolio</title>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- css -->
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/lib.css" />
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protfolio</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+   rel="stylesheet"
+  />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/lib.css" />
+  <link rel="stylesheet" href="./css/modal.css" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-    <!-- js -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js" defer></script>
-  </head>
-  <body>
-    <div class="wrap">
-      <header class="header">
-        <nav class="nav">
-          <div class="menu">
-            <a href="#">
-              <h1>intro</h1>
-            </a>
-            <a href="#">
-              <h1>About Me</h1>
-            </a>
-            <a href="#">
-              <h1>Web</h1>
-            </a>
-            <a href="#">
-              <h1>App</h1>
-            </a>
-            <a href="#">
-              <h1>Poster Design</h1>
-            </a>
-            <a href="#">
-              <h1>Detail page</h1>
-            </a>
-            <a href="#">
-              <h1>Branding</h1>
-            </a>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <!-- js -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/lib.js" defer></script>
+ </head>
+ <body>
+  <div class="wrap">
+   <header class="header">
+    <div class="gnb items relative hidden space-x-1 md:flex">
+     <div class="point"></div>
+     <a class="frame-inner group" href="#intro">
+      <h1 class="menu-text">Intro</h1>
+     </a>
+     <a class="frame-inner group" href="#about">
+      <h1 class="menu-text">About Me</h1>
+     </a>
+     <a class="frame-inner group" href="#web">
+      <h1 class="menu-text">Web</h1>
+     </a>
+     <a class="frame-inner group" href="#app">
+      <h1 class="menu-text">App</h1>
+     </a>
+     <a class="frame-inner group" href="#poster">
+      <h1 class="menu-text">Poster</h1>
+     </a>
+     <a class="frame-inner group" href="#detail">
+      <h1 class="menu-text">Detail Page</h1>
+     </a>
+     <a class="frame-inner group" href="#branding">
+      <h1 class="menu-text">Branding</h1>
+     </a>
+    </div>
+   </header>
+   <main class="main">
+    <section id="intro" class="intro">
+     <h1 class="main-title">Transition State</h1>
+     <div class="visual">
+      <div class="bg"></div>
+      <div id="about-me" class="about-me"></div>
+     </div>
+    </section>
+    <section id="web" class="web">
+     <div class="web-content">
+      <div class="web-content-item dong">
+       <div class="web-content-item-inner">
+        <div class="web-content-img">
+         <img src="img/web/web-동백.png" alt="web-1" />
+        </div>
+        <ul class="tag-list">
+         <li>클론코딩</li>
+         <li>리디자인</li>
+         <li>반응형</li>
+         <li>모바일</li>
+         <li>협업</li>
+        </ul>
+        <div class="web-content-desc">
+         <div class="desc">
+          <p class="desc-title">동백여행사</p>
+          <span>
+           역할: 메인 페이지 슬라이드, 서브페이지, 모바일 메인페이지, 모바일 서브페이지
+          </span>
+         </div>
+         <div class="desc-detail">
+          <div class="link">
+           <a href="#">figma 보기</a>
           </div>
-        </nav>
-      </header>
-      <main class="main">
-        <section class="intro">
-          <h1 class="main-title">Transition State</h1>
-          <div class="visual">
-            <div class="bg"></div>
-            <div class="about-me"></div>
+          <div class="tool-list">
+           <img style="width: 36px; height: 36px" src="img/icon/figma-icon.png" alt="figma" />
           </div>
-        </section>
-        <section class="web">
-          <div class="web-content">
-            <div class="web-content-item">
-              <div class="web-content-item-inner">
-                <div class="web-content-img">
-                  <img src="img/web/web-동백.png" alt="web-1" />
-                </div>
-                <ul class="tag-list">
-                  <li>클론코딩</li>
-                  <li>리디자인</li>
-                  <li>반응형</li>
-                  <li>모바일</li>
-                  <li>협업</li>
-                </ul>
-                <div class="web-content-desc">
-                  <div class="desc">
-                    <p class="desc-title">동백여행사</p>
-                    <span>
-                      역할: 메인 페이지 슬라이드, 서브페이지, 모바일 메인페이지,
-                      모바일 서브페이지
-                    </span>
-                  </div>
-                  <div class="desc-detail">
-                    <div class="link">
-                      <a href="#">figma 보기</a>
-                    </div>
-                    <div class="tool-list">
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/figma-icon.png"
-                        alt="figma"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="web-content-item">
-              <div class="web-content-item-inner">
-                <div class="web-content-img">
-                  <img src="img/web/web-pj.png" alt="web-2" />
-                </div>
-                <ul class="tag-list">
-                  <li>클론코딩</li>
-                  <li>리디자인</li>
-                  <li>반응형</li>
-                  <li>모바일</li>
-                  <li>협업</li>
-                </ul>
-                <div class="web-content-desc">
-                  <div class="desc">
-                    <p class="desc-title">pj design</p>
-                    <span>
-                      역할: 전체 구조 분석 → 정적 마크업 → 스크롤 애니메 이션
-                      구현
-                    </span>
-                  </div>
-                  <div class="desc-detail">
-                    <div class="link">
-                      <a href="#">figma 보기</a>
-                      <a href="#">notion 보기</a>
-                    </div>
-                    <div class="tool-list">
-                      <!-- <img
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="web-content-item pj">
+       <div class="web-content-item-inner">
+        <div class="web-content-img">
+         <img src="img/web/web-pj.png" alt="web-2" />
+        </div>
+        <ul class="tag-list">
+         <li>클론코딩</li>
+         <li>리디자인</li>
+         <li>반응형</li>
+         <li>모바일</li>
+         <li>협업</li>
+        </ul>
+        <div class="web-content-desc">
+         <div class="desc">
+          <p class="desc-title">pj design</p>
+          <span> 역할: 전체 구조 분석 → 정적 마크업 → 스크롤 애니메 이션 구현 </span>
+         </div>
+         <div class="desc-detail">
+          <div class="link">
+           <a href="#">figma 보기</a>
+           <a href="#">notion 보기</a>
+          </div>
+          <div class="tool-list">
+           <!-- <img
                         style="width: 36px; height: 36px"
                         src="img/icon/html-icon.png"
                         alt="figma"
@@ -141,56 +132,44 @@
                         src="img/icon/css-icon.png"
                         alt="css"
                       /> -->
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/js-icon.png"
-                        alt="js"
-                      />
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/swiper-icon.png"
-                        alt="swiper-icon"
-                      />
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/gsap-icon.png"
-                        alt="gsap-icon"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="web-content-item">
-              <div class="web-content-item-inner">
-                <div class="web-content-img">
-                  <img src="img/web/web-중외.png" alt="web-3" />
-                </div>
-                <ul class="tag-list">
-                  <li>클론코딩</li>
-                  <li>리디자인</li>
-                  <li>반응형</li>
-                  <li>모바일</li>
-                  <li>협업</li>
-                </ul>
-                <div class="web-content-desc">
-                  <div class="desc">
-                    <p class="desc-title">중외제약</p>
-                    <span>역할: 디자인 해석 및 퍼블리싱 100%</span>
-                  </div>
-                  <div class="desc-detail">
-                    <div class="link">
-                      <a href="#">notion 보기</a>
-                      <a href="#">figma 보기</a>
-                    </div>
-                    <div class="tool-list">
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/figma-icon.png"
-                        alt="figma"
-                      />
+           <img style="width: 36px; height: 36px" src="img/icon/js-icon.png" alt="js" />
+           <img
+            style="width: 36px; height: 36px"
+            src="img/icon/swiper-icon.png"
+            alt="swiper-icon"
+           />
+           <img style="width: 36px; height: 36px" src="img/icon/gsap-icon.png" alt="gsap-icon" />
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="web-content-item jung">
+       <div class="web-content-item-inner">
+        <div class="web-content-img">
+         <img src="img/web/web-중외.png" alt="web-3" />
+        </div>
+        <ul class="tag-list">
+         <li>클론코딩</li>
+         <li>리디자인</li>
+         <li>반응형</li>
+         <li>모바일</li>
+         <li>협업</li>
+        </ul>
+        <div class="web-content-desc">
+         <div class="desc">
+          <p class="desc-title">중외제약</p>
+          <span>역할: Figma를 활용한 메인 및 서브페이지 리디자인, 퍼블리싱 진행 중</span>
+         </div>
+         <div class="desc-detail">
+          <div class="link">
+           <a href="#">notion 보기</a>
+           <a href="#">figma 보기</a>
+          </div>
+          <div class="tool-list">
+           <img style="width: 36px; height: 36px" src="img/icon/figma-icon.png" alt="figma" />
 
-                      <!-- <img
+           <!-- <img
                         style="width: 36px; height: 36px"
                         src="img/icon/html-icon.png"
                         alt="html"
@@ -200,76 +179,64 @@
                         src="img/icon/css-icon.png"
                         alt="css"
                       /> -->
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/js-icon.png"
-                        alt="js"
-                      />
-                      <img
-                        style="width: 36px; height: 36px"
-                        src="img/icon/swiper-icon.png"
-                        alt="swiper"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           <img style="width: 36px; height: 36px" src="img/icon/js-icon.png" alt="js" />
+           <img style="width: 36px; height: 36px" src="img/icon/swiper-icon.png" alt="swiper" />
           </div>
-        </section>
-        <section class="app">
-          <div class="app-inner page-inner">
-            <div class="app-left page-left">
-              <div class="app-left-desc page-left-desc">
-                <ul class="app-tag-list">
-                  <li>협업</li>
-                  <li>앱디자인</li>
-                </ul>
-                <div class="app-left-desc-txt page-left-txt">
-                  <p>Pawkit</p>
-                  <span>반려동물 큐레이션 쇼핑 앱</span>
-                </div>
-                <div class="app-left-desc-bottom page-left-bottom">
-                  <div class="link-list">
-                    <a
-                      href="https://www.figma.com/proto/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=478%3A13752&node-id=478-21835&p=f&viewport=661%2C25%2C0.03&t=Y3ZCyns95W5p9ECe-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=478%3A21835"
-                      >제작 프로세스 보기</a
-                    >
-                    <a
-                      href="https://www.figma.com/design/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=478-13752&t=GzJZ7DLsc9e62AhL-1"
-                      >figma 보기</a
-                    >
-                  </div>
-                  <div class="tool-list">
-                    <img
-                      style="width: 36px; height: 36px"
-                      src="img/icon/figma-icon.png"
-                      alt="figma"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="app-left-img page-left-img">
-                <img src="img/app/mobile-mokup.png" alt="mobile-mokup" />
-              </div>
-            </div>
-            <div class="app-right page-right scroll-container">
-              <div class="app-main-img scroll-1">
-                <img src="img/app/main.png" alt="app-main-img" />
-                <img src="img/app/main.png" alt="app-main-img" />
-                <img src="img/app/main.png" alt="app-main-img" />
-              </div>
-              <div class="app-sub-img scroll-2">
-                <img src="img/app/commu-home.png" alt="app-home" />
-                <img src="img/app/commu-home.png" alt="app-home" />
-                <img src="img/app/commu-home.png" alt="app-home" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="poster">
-          <div class="poster-inner">
-            <swiper-container
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="app" class="app">
+     <div class="app-inner page-inner">
+      <div class="app-left page-left">
+       <div class="app-left-desc page-left-desc">
+        <ul class="app-tag-list">
+         <li>협업</li>
+         <li>앱디자인</li>
+        </ul>
+        <div class="app-left-desc-txt page-left-txt">
+         <p>Pawkit</p>
+         <span>반려동물 큐레이션 쇼핑 앱</span>
+        </div>
+        <div class="app-left-desc-bottom page-left-bottom">
+         <div class="link-list">
+          <a
+           href="https://www.figma.com/proto/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=478%3A13752&node-id=478-21835&p=f&viewport=661%2C25%2C0.03&t=Y3ZCyns95W5p9ECe-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=478%3A21835"
+           >제작 프로세스 보기</a
+          >
+          <a
+           href="https://www.figma.com/design/I8RPK1jlzqohMyz0y1EXhK/3%EC%A1%B0-%ED%98%91%EC%97%85-%EC%95%B1-%EB%94%94%EC%9E%90%EC%9D%B8?node-id=478-13752&t=GzJZ7DLsc9e62AhL-1"
+           >figma 보기</a
+          >
+         </div>
+         <div class="tool-list">
+          <img style="width: 36px; height: 36px" src="img/icon/figma-icon.png" alt="figma" />
+         </div>
+        </div>
+       </div>
+       <div class="app-left-img page-left-img">
+        <img src="img/app/mobile-mokup.png" alt="mobile-mokup" />
+       </div>
+      </div>
+      <div class="app-right page-right scroll-container">
+       <div class="app-main-img scroll-1">
+        <img src="img/app/main.png" alt="app-main-img" />
+        <img src="img/app/main.png" alt="app-main-img" />
+        <img src="img/app/main.png" alt="app-main-img" />
+       </div>
+       <div class="app-sub-img scroll-2">
+        <img src="img/app/commu-home.png" alt="app-home" />
+        <img src="img/app/commu-home.png" alt="app-home" />
+        <img src="img/app/commu-home.png" alt="app-home" />
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="poster" class="poster">
+     <div class="poster-inner">
+      <!-- <swiper-container
               class="mySwiper"
               space-between="30"
               slides-per-view="3.5"
@@ -280,132 +247,163 @@
               <swiper-slide>Slide 3</swiper-slide>
               <swiper-slide>Slide 4</swiper-slide>
               <swiper-slide>Slide 5</swiper-slide>
-            </swiper-container>
-
-            <!-- 커스텀 버튼 -->
-            <div class="swiper-btn">
+            </swiper-container> -->
+      <!-- 커스텀 버튼 -->
+      <!-- <div class="swiper-btn">
               <div class="custom-prev">
                 <img src="img/icon/arrow-bottom.png" alt="prev" />
               </div>
               <div class="custom-next">
                 <img src="img/icon/arrow-bottom.png" alt="next" />
               </div>
-            </div>
-          </div>
-        </section>
-        <section class="detail-page">
-          <div class="detail-page-inner page-inner">
-            <div class="detail-page-left page-left">
-              <div class="detail-page-left-desc page-left-desc">
-                <div class="detail-page-left-desc-txt page-left-txt">
-                  <p>상세페이지</p>
-                  <div class="branding-name">
-                    <p>마틴콕스 가방</p>
-                    <span>절제된 레이아웃으로 브랜드의 클래식함을 표현</span>
-                  </div>
-                </div>
-                <div class="detail-page-left-desc-bottom page-left-bottom">
-                  <div class="tool-list">
-                    <img
-                      style="width: 36px; height: 36px"
-                      src="img/icon/ps-icon.png"
-                      alt="ps-icon"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="detail-page-left-img page-left-img">
-                <img src="img/detail/Image.png" alt="detail-page-img" />
-              </div>
-            </div>
-            <div class="detail-page-right page-right .scroll-container">
-              <div class="detail-page-img-1 scroll-1">
-                <img src="img/detail/상세페이지1.png" alt="detail-1" />
-                <img src="img/detail/상세페이지1.png" alt="detail-1" />
-                <img src="img/detail/상세페이지1.png" alt="detail-1" />
-              </div>
-              <div class="detail-page-img-2 scroll-2">
-                <img src="img/detail/상세페이지2.png" alt="detail-2" />
-                <img src="img/detail/상세페이지2.png" alt="detail-2" />
-                <img src="img/detail/상세페이지2.png" alt="detail-2" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="branding">
-          <div class="branding-inner page-inner">
-            <div class="branding-left page-left">
-              <div class="branding-left-desc page-left-desc">
-                <div class="branding-left-desc-txt page-left-txt">
-                  <p>브랜드 디자인</p>
-                  <div class="branding-name">
-                    <p>케어루틴</p>
-                    <span>맞춤형 영양제 케어 서비스</span>
-                  </div>
-                </div>
-                <div class="branding-left-desc-bottom page-left-bottom">
-                  <div class="tool-list">
-                    <img
-                      style="width: 36px; height: 36px"
-                      src="img/icon/ai-icon.png"
-                      alt="ps-icon"
-                    />
-                    <img
-                      style="width: 36px; height: 36px"
-                      src="img/icon/ps-icon.png"
-                      alt="ps-icon"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="branding-left-img page-left-img">
-                <img src="img/branding/logo.png" alt="detail-page-img" />
-              </div>
-            </div>
-            <div class="branding-right page-right">
-              <div class="branding-img">
-                <img src="img/branding/branding.png" alt="branding" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-    <div id="modal-web-dong" class="web-modal">
-      <div class="web-modal-inner">
-        <!-- <div class="web-modal-top">
-          <p>Main Page</p>
-        </div>
-        <div class="web-modal-content"></div>
-        <div class="web-modal-link"></div> -->
-        <swiper-container
-          class="mySwiper2"
-          pagination="true"
-          effect="coverflow"
-          grab-cursor="true"
-          centered-slides="true"
-          slides-per-view="auto"
-          coverflow-effect-rotate="50"
-          coverflow-effect-stretch="0"
-          coverflow-effect-depth="100"
-          coverflow-effect-modifier="1"
-          coverflow-effect-slide-shadows="true"
-        >
-          <swiper-slide>
-            <img src="img/web/main.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="img/web/sub-page-detail.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="img/web/sub-page-pack.png" />
-          </swiper-slide>
-        </swiper-container>
-      </div>
-    </div>
-    <div id="modal-web-pj" class="web-modal"></div>
-    <div id="modal-web-jung" class="web-modal"></div>
+            </div> -->
+      <swiper-container
+       class="mySwiper"
+       space-between="30"
+       slides-per-view="3.5"
+       centered-slides="true"
+       loop="true"
+       grab-cursor="true"
+      >
+       <swiper-slide><img src="img/poster/torriden.jpg" alt="Web1" /></swiper-slide>
+       <swiper-slide><img src="img/poster/drink.jpg" alt="Web2" /></swiper-slide>
+       <swiper-slide><img src="img/poster/음료버전2.jpg" alt="Web3" /></swiper-slide>
+       <swiper-slide><img src="img/poster/torriden.jpg" alt="Web4" /></swiper-slide>
+       <swiper-slide><img src="img/poster/음료버전2.jpg" alt="Web5" /></swiper-slide>
+      </swiper-container>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  </body>
+      <!-- 커스텀 버튼 -->
+      <div class="swiper-btn">
+       <div class="custom-prev">
+        <img src="img/icon/arrow-bottom.png" alt="prev" />
+       </div>
+       <div class="custom-next">
+        <img src="img/icon/arrow-bottom.png" alt="next" />
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="detail" class="detail-page">
+     <div class="detail-page-inner page-inner">
+      <div class="detail-page-left page-left">
+       <div class="detail-page-left-desc page-left-desc">
+        <div class="detail-page-left-desc-txt page-left-txt">
+         <p>상세페이지</p>
+         <div class="branding-name">
+          <p>마틴콕스 가방</p>
+          <span>절제된 레이아웃으로 브랜드의 클래식함을 표현</span>
+         </div>
+        </div>
+        <div class="detail-page-left-desc-bottom page-left-bottom">
+         <div class="tool-list">
+          <img style="width: 36px; height: 36px" src="img/icon/ps-icon.png" alt="ps-icon" />
+         </div>
+        </div>
+       </div>
+       <div class="detail-page-left-img page-left-img">
+        <img src="img/detail/Image.png" alt="detail-page-img" />
+       </div>
+      </div>
+      <div class="detail-page-right page-right .scroll-container">
+       <div class="detail-page-img-1 scroll-1">
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+        <img src="img/detail/상세페이지1.png" alt="detail-1" />
+       </div>
+       <div class="detail-page-img-2 scroll-2">
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+        <img src="img/detail/상세페이지2.png" alt="detail-2" />
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="branding" class="branding">
+     <div class="branding-inner page-inner">
+      <div class="branding-left page-left">
+       <div class="branding-left-desc page-left-desc">
+        <div class="branding-left-desc-txt page-left-txt">
+         <p>브랜드 디자인</p>
+         <div class="branding-name">
+          <p>케어루틴</p>
+          <span>맞춤형 영양제 케어 서비스</span>
+         </div>
+        </div>
+        <div class="branding-left-desc-bottom page-left-bottom">
+         <div class="tool-list">
+          <img style="width: 36px; height: 36px" src="img/icon/ai-icon.png" alt="ps-icon" />
+          <img style="width: 36px; height: 36px" src="img/icon/ps-icon.png" alt="ps-icon" />
+         </div>
+        </div>
+       </div>
+       <div class="branding-left-img page-left-img">
+        <img src="img/branding/logo.png" alt="detail-page-img" />
+       </div>
+      </div>
+      <div class="branding-right page-right">
+       <div class="branding-img">
+        <img src="img/branding/branding.png" alt="branding" />
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div id="modal-web-dong" class="web-modal">
+   <div class="web-modal-inner">
+    <div class="web-modal-top">
+     <p>Main Page</p>
+     <img
+      src="img/icon/close.png"
+      alt="modal-close"
+      style="width: 36px; height: 36px"
+      class="modal-close"
+     />
+    </div>
+    <div class="web-modal-content">
+     <swiper-container
+      class="mySwiper2"
+      pagination="true"
+      effect="coverflow"
+      grab-cursor="true"
+      centered-slides="true"
+      slides-per-view="auto"
+      coverflow-effect-rotate="50"
+      coverflow-effect-stretch="0"
+      coverflow-effect-depth="100"
+      coverflow-effect-modifier="1"
+      coverflow-effect-slide-shadows="true"
+     >
+      <swiper-slide>
+       <img src="img/web/main.png" />
+      </swiper-slide>
+      <swiper-slide>
+       <img src="img/web/sub-page-detail.png" />
+      </swiper-slide>
+      <swiper-slide>
+       <img src="img/web/sub-page-pack.png" />
+      </swiper-slide>
+     </swiper-container>
+    </div>
+    <div class="web-modal-link">
+     <a href="#"
+      >모바일 보기
+      <img
+       src="img/icon/arrow-bottom.png"
+       alt="modal-link"
+       style="width: 36px; height: 36px; transform: rotate(270deg)"
+      />
+     </a>
+    </div>
+   </div>
+  </div>
+  <div id="modal-web-pj" class="web-modal"></div>
+  <div id="modal-web-jung" class="web-modal"></div>
+ </body>
 </html>

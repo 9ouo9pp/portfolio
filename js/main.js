@@ -38,71 +38,113 @@ gsap.registerPlugin(ScrollTrigger);
 
 // intro
 gsap.set(".visual .bg", {
-  width: "20vw",
-  height: "64vh",
-  borderRadius: "200px"
+ width: "20vw",
+ height: "64vh",
+ borderRadius: "200px",
 });
 
 //gsap scrolltrigger
 const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".visual",
-    start: "top top",
-    end: "bottom top",
-    pin: true,
-    scrub: 1,
-    pinSpacing: true,
-    markers: true,
-    onUpdate: (self) => {
-      const progress = self.progress;
-      const aboutMe = document.querySelector(".about-me");
-      if (progress >= 0.5) {
-        aboutMe.classList.add("on");
-      } else {
-        aboutMe.classList.remove("on");
-      }
-    }
-  }
+ scrollTrigger: {
+  trigger: ".visual",
+  start: "top top",
+  end: "bottom top",
+  pin: true,
+  scrub: 1,
+  pinSpacing: true,
+  markers: true,
+  onUpdate: (self) => {
+   const progress = self.progress;
+   const aboutMe = document.querySelector(".about-me");
+   if (progress >= 0.5) {
+    aboutMe.classList.add("on");
+   } else {
+    aboutMe.classList.remove("on");
+   }
+  },
+ },
 });
 
 tl.to(".visual .bg", {
-  clipPath: "inset(0% 0%)",
-  duration: 2,
-  width: "100vw",
-  height: "100vh",
-  borderRadius: "0px",
-  ease: "power2.inOut"
+ clipPath: "inset(0% 0%)",
+ duration: 2,
+ width: "100vw",
+ height: "100vh",
+ borderRadius: "0px",
+ ease: "power2.inOut",
 });
 
 tl.to({}, { duration: 2 });
 
+// header====================================================
+const point = document.querySelector(".point");
+const menuLinks = document.querySelectorAll(".gnb .frame-inner");
 
-// app
-function setupAutoScroll(containerSelector, speed = 0.5) {
-  const container = document.querySelector(containerSelector);
-  let autoScroll = true;
+// 초기 위치 (Intro 메뉴)
+const initTarget = menuLinks[0];
+movePoint(initTarget);
 
-  function scrollLoop() {
-    if (autoScroll) {
-      container.scrollTop += speed;
+menuLinks.forEach((link) => {
+ link.addEventListener("click", (e) => {
+  e.preventDefault();
 
-      if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
-        container.scrollTop = 0;
-      }
-    }
-    requestAnimationFrame(scrollLoop);
-  }
+  const targetID = link.getAttribute("href");
+  const targetSection = document.querySelector(targetID);
 
-  scrollLoop();
-
-  // 사용자 스크롤 시 자동 멈춤 → 일정 시간 후 재시작
-  container.addEventListener("wheel", () => {
-    autoScroll = false;
-    clearTimeout(container._scrollTimeout);
-    container._scrollTimeout = setTimeout(() => {
-      autoScroll = true;
-    }, 2000); // 3초 후 재시작
+  // 스크롤 이동
+  gsap.to(window, {
+   scrollTo: targetID,
+   duration: 1,
+   ease: "power2.out",
   });
+
+  // 포인트 이동 및 너비 조정
+  movePoint(link);
+ });
+});
+
+function movePoint(target) {
+ const gnbRect = document.querySelector(".gnb").getBoundingClientRect();
+ const targetRect = target.getBoundingClientRect();
+
+ const leftValue = targetRect.left - gnbRect.left;
+ const widthValue = targetRect.width;
+
+ gsap.to(point, {
+  left: leftValue,
+  width: widthValue,
+  duration: 0.5,
+  ease: "power2.out",
+ });
+}
+// header end==================================================
+
+// app==========================================================
+function setupAutoScroll(containerSelector, speed = 0.5) {
+ const container = document.querySelector(containerSelector);
+ let autoScroll = true;
+
+ function scrollLoop() {
+  if (autoScroll) {
+   container.scrollTop += speed;
+
+   if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
+    container.scrollTop = 0;
+   }
+  }
+  requestAnimationFrame(scrollLoop);
+ }
+
+ //  scrollLoop();
+
+ // 사용자 스크롤 시 자동 멈춤 → 일정 시간 후 재시작
+ container.addEventListener("wheel", () => {
+  autoScroll = false;
+  clearTimeout(container._scrollTimeout);
+  container._scrollTimeout = setTimeout(() => {
+   autoScroll = true;
+  }, 2000); // 3초 후 재시작
+ });
 }
 
 // 각각 독립적으로 자동 스크롤 적용
@@ -111,5 +153,5 @@ setupAutoScroll(".scroll-2", 0.3);
 // detail-page 우측 이미지 자동 스크롤 적용
 setupAutoScroll(".detail-page-img-1", 0.5);
 setupAutoScroll(".detail-page-img-2", 0.3);
-// app end
 setupAutoScroll(".branding-img", 0.4);
+// app end=========================================================

@@ -1,12 +1,41 @@
+// // poster
+// import { register } from "swiper/element/bundle";
+// register();
 
-// 스와이퍼 커스텀 버튼 연결
+// const swiperEl = document.querySelector(".mySwiper");
 
-import { register } from 'swiper/element/bundle';
-register();
+// // navigation 설정 포함
+// swiperEl.params = {
+//   ...swiperEl.params,
+//   navigation: {
+//     nextEl: ".custom-next",
+//     prevEl: ".custom-prev"
+//   }
+// };
 
-const swiperEl = document.querySelector('.mySwiper');
+// 반드시 수동 초기화 호출
+// swiperEl.initialize();
 
-swiperEl.navigation = {
-    nextEl: '.custom-next',
-    prevEl: '.custom-prev',
-};
+// const swiper = new Swiper(".mySwiper", {
+//   navigation: {
+//     nextEl: ".custom-next",
+//     prevEl: ".custom-prev"
+//   }
+// });
+
+// poster
+
+// Smooth scroll with GSAP
+document.querySelectorAll(".frame-inner").forEach((link) => {
+ link.addEventListener("click", (e) => {
+  e.preventDefault();
+  const target = document.querySelector(link.getAttribute("href"));
+  if (target) {
+   gsap.to(window, {
+    duration: 1,
+    scrollTo: target.offsetTop,
+    ease: "power2.inOut",
+   });
+  }
+ });
+});
