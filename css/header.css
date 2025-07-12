@@ -31,6 +31,7 @@
 }
 .menu-text {
   position: relative;
+  white-space: nowrap;
   padding: 12px 20px;
   font-size: 16px;
   color: #555;

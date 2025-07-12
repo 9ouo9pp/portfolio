@@ -2,93 +2,39 @@
 
 /* poster */
 
-.mySwiper {
-  width: 100%;
-  height: 70vh;
-  padding: 12px 12px;
-}
-.mySwiper swiper-slide {
-  /* width: 20vw; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s, filter 0.5s, opacity 0.5s;
-  cursor: pointer;
-}
-.mySwiper swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* 양옆 슬라이드 흐림 처리 */
-.mySwiper swiper-slide:not(.swiper-slide-active) {
-  filter: blur(6px);
-  transform: scale(0.8);
-  opacity: 0.4;
-}
-
-/* 활성 슬라이드 강조 */
-.mySwiper swiper-slide.swiper-slide-active {
-  filter: none;
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* 커스텀 버튼 */
-.swiper-btn {
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-}
-.custom-prev img,
-.custom-next img {
-  width: 40px;
-  height: 40px;
-}
-.custom-prev img {
-  transform: rotate(90deg);
-}
-.custom-next img {
-  transform: rotate(270deg);
-}
-
 /* poster end */
 
 /* web-modal */
 /* Swiper Container */
-.mySwiper2 swiper-container {
+/* .swiper2 {
   width: 100%;
+  height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-}
+} */
 
-.mySwiper2 swiper-slide {
+/* .swiper2 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 1000px;
-  height: 100vh;
-  overflow-y: auto;
-}
+  width: 300px;
+  height: 300px;
+} */
 
-.mySwiper2 swiper-slide img {
+/* .swiper2 .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
-}
+} */
+
 /* 기본 dot 색상 변경 */
-.swiper-pagination-bullet {
+/* .swiper2 .swiper-pagination-bullet {
   background-color: #d8def8;
   opacity: 0.5;
-}
+} */
 
 /* 활성화된 dot 색상 */
-.swiper-pagination-bullet-active {
+/* .swiper2 .swiper-pagination-bullet-active {
   background-color: #d8def8;
   opacity: 1;
-}
+} */
 
 /* web-mnodal end */
