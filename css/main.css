@@ -355,23 +355,19 @@
 }
 
 .web-content {
-  /* height: 56vh; */
   min-width: 432px;
-  /* max-width: 500px; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-  /* padding: 0 80px; */
   box-sizing: border-box;
 }
 
 .web-content-item {
+  position: relative;
   flex: 1 1 300px;
   height: 100%;
-  /* width: 100%; */
-  /* max-width: 460px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,7 +380,6 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-origin: center center;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .web-content-item:hover {
@@ -400,55 +395,94 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px 0; */
 }
 
 .web-content-img {
   width: 100%;
   overflow: hidden;
-  /* border-radius: 20px; */
+  position: relative;
+  cursor: pointer;
 }
 
+/* 이미지 */
 .web-content-img img {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
   box-shadow: 4px 4px 20px rgba(189, 189, 189, 0.2);
-  /* border-radius: 20px; */
+  transition: filter 0.3s ease;
+  z-index: 1;
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 12px 30px;
-  box-sizing: border-box;
+/* 이미지 블러 */
+.web-content-item:hover .web-content-img .web-img {
+  filter: blur(2px);
+  transition: filter 0.4s ease;
+}
+
+/* 오버레이: 보라빛+블루 느낌 */
+.web-content-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(216, 222, 248, 0.6),
+    rgba(200, 180, 255, 0.4)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+  backdrop-filter: blur(1.5px); /* 💡 부드럽게 */
 }
 
-.tag-list li {
-  padding: 6px 14px;
-  background: var(--gray5, #fdfdfd);
-  border-radius: 10px;
-  border: 0.5px solid var(--gra1, #d8def8);
-  background: var(--gray5, #fdfdfd);
-  /* box-shadow: 1px 1px 4px 0px rgba(79, 79, 79, 0.1); */
-  font-size: 15px;
-  color: var(--gray1, #121212);
-  font-family: "Pretendard", sans-serif;
+/* hover 시 overlay 활성화 */
+.web-content-item:hover .web-content-img::after {
+  opacity: 1;
+}
+
+/* 눈 아이콘  */
+.web-content .eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%) scale(0.85);
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+}
+
+/* 아이콘 확대 애니메이션 */
+.web-content-item:hover .eye-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* 여기서 부터============================================================== */
+p.eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  color: var(--gray2, #4f4f4f);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.368px;
 }
 
 .web-content-desc {
-  /* display: flex;
-  flex-direction: column;
-  padding: 0 30px 24px;
-  gap: 16px;
-  width: 100%;
-  box-sizing: border-box; */
-
   display: flex;
-  padding: 0px 30px 24px 30px;
+  padding: 0px 24px 24px 30px;
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
@@ -460,7 +494,7 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  height: 8vh;
+  height: 16vh;
 }
 
 .desc p,
@@ -478,37 +512,41 @@
   color: var(--gray2, #4f4f4f);
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tag-list li {
+  padding: 6px 14px;
+  background: var(--gray5, #fdfdfd);
+  border-radius: 10px;
+  border: 0.5px solid var(--gra1, #d8def8);
+  font-size: 15px;
+  color: var(--gray1, #121212);
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+}
+
 .link {
   display: flex;
   padding: 16px 0px;
   align-items: center;
   gap: 12px;
 }
+
 .link a {
   white-space: nowrap;
   font-size: 16px;
 }
+
 .web .tool-list {
   width: 100%;
 }
-/* .link .desc-detail {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  width: 100%;
-} */
-/* .desc-detail .link {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  font-size: 14px;
-} */
-/* .desc-detail .link a {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-} */
 
 @media (max-width: 768px) {
   .web-content {

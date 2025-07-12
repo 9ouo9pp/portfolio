@@ -1,5 +1,5 @@
 // dong
-$(".dong").click((e) => {
+$(".dong img").click((e) => {
   e.preventDefault();
   $("#modal-web-dong").addClass("active");
 });
@@ -9,7 +9,7 @@ $(".modal-close").click((e) => {
 });
 // dong end
 // pj
-$(".pj").click((e) => {
+$(".pj img").click((e) => {
   e.preventDefault();
   $("#modal-web-pj").addClass("active");
 });
@@ -19,7 +19,7 @@ $(".modal-close").click((e) => {
 });
 // pj end
 // jung
-$(".jung").click((e) => {
+$(".jung img").click((e) => {
   e.preventDefault();
   $("#modal-web-jung").addClass("active");
 });
@@ -28,3 +28,13 @@ $(".modal-close").click((e) => {
   $("#modal-web-jung").removeClass("active");
 });
 // jung end
+// dong app
+$(".web-modal-link").click((e) => {
+  e.preventDefault();
+  $("#modal-web-dong-app").addClass("active");
+});
+$(".modal-close").click((e) => {
+  e.preventDefault();
+  $("#modal-web-dong-app").removeClass("active");
+});
+// dong app end
